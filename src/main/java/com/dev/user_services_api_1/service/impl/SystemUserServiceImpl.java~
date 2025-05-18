@@ -73,7 +73,6 @@ public class SystemUserServiceImpl implements SystemUserService {
                     .isAccountNonLocked(true)
                     .isCredentialsNonExpired(true)
                     .build();
-            systemUserRepo.save(systemUser);
 
         }
 

@@ -21,6 +21,16 @@ public class SystemUser {
     private String email;
     @Column(name = "status" ,nullable = false, columnDefinition = "TINYINT")
     private boolean status;
+    @Column(name = "full_name" ,nullable = false, length = 150)
+    private String fullName;
+    @Column(name = "is_account_non_expired", columnDefinition = "TINYINT")
+    private boolean isAccountNonExpired;
+    @Column(name = "is_credentials_non_expired", columnDefinition = "TINYINT")
+    private boolean isCredentialsNonExpired;
+    @Column(name = "is_account_non_locked", columnDefinition = "TINYINT")
+    private boolean isAccountNonLocked;
+    @Column(name = "is_enable", columnDefinition = "TINYINT")
+    private boolean isEnable;
 
     @OneToOne(mappedBy = "systemUser",fetch = FetchType.LAZY)
     private BillingAddress billingAddress;
